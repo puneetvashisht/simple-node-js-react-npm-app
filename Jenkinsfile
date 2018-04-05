@@ -12,6 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm install'
+                sh './jenkins/scripts/docker.sh'
             }
         }
         stage('Test') {
